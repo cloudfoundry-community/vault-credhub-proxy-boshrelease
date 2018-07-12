@@ -18,8 +18,8 @@ properties:
     description: TLS certificate
   tls.private_key:
     description: TLS private key
-  credhub.server
+  credhub.server:
     description: URL of the credhub server being proxied
-  credhub.ca
+  credhub.ca:
     description: CA certificate of the credhub server
     

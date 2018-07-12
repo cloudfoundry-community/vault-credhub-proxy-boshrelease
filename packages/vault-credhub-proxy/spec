@@ -5,5 +5,4 @@ dependencies:
 - golang-1.10-linux
 
 files:
-- vault-credhub-proxy/*.go
-- vault-credhub-proxy/**/*.go
+- vault-credhub-proxy/**/*
