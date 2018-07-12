@@ -1,0 +1,21 @@
+<%=
+env = {
+  "ADDRESS" => p('address'),
+  "CREDHUB_SERVER" => p('credhub.server'),
+  "CREDHUB_CA_CERT" => "/var/vcap/jobs/vault-credhub-proxy/config/credhub.ca",
+}
+
+if_p('tls.certificate', 'tls.private_key') do
+  env["TLS_CERT_FILE"] = "/var/vcap/jobs/vault-credhub-proxy/config/cert.crt"
+  env["TLS_KEY_FILE"] = "/var/vcap/jobs/vault-credhub-proxy/config/private.key"
+end
+
+config = {
+  "processes" => [
+    "name" => "vault-credhub-proxy",
+    "executable" => "/var/vcap/packages/vault-credhub-proxy/bin/vault-credhub-proxy",
+    "env" => env,
+  ]
+}
+YAML.dump(config)
+%>

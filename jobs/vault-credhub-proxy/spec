@@ -1,0 +1,25 @@
+---
+name: vault-credhub-proxy
+
+templates:
+  bpm.yml: config/bpm.yml
+  cert.crt: config/cert.crt
+  private.key: config/private.key
+  credhub.ca: config/credhub.ca
+
+packages:
+- vault-credhub-proxy
+
+properties:
+  address:
+    description: Address and port to listen on
+    default: 127.0.0.1:8200
+  tls.certificate:
+    description: TLS certificate
+  tls.private_key:
+    description: TLS private key
+  credhub.server
+    description: URL of the credhub server being proxied
+  credhub.ca
+    description: CA certificate of the credhub server
+    

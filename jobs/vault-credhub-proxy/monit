@@ -1,0 +1,5 @@
+check process vault-credhub-proxy
+  with pidfile /var/vcap/sys/run/bpm/vault-credhub-proxy/vault-credhub-proxy.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start vault-credhub-proxy"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop vault-credhub-proxy"
+  group vcap
