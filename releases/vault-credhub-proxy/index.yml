@@ -9,4 +9,6 @@ builds:
     version: 1.1.2
   b99d8b8a-2cc6-47fa-5494-d170a58ecbe1:
     version: 1.1.3
+  bd268f50-c0c9-4eae-6a21-1e0d23c2e236:
+    version: 1.1.4
 format-version: "2"
