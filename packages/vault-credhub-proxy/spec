@@ -2,7 +2,7 @@
 name: vault-credhub-proxy
 
 dependencies:
-- golang-1.10-linux
+- golang-1.13-linux
 
 files:
 - vault-credhub-proxy/**/*
