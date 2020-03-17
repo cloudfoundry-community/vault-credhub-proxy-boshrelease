@@ -1,0 +1,23 @@
+name: vault-credhub-proxy
+version: 1.1.6
+commit_hash: 863e953
+uncommitted_changes: false
+jobs:
+- name: vault-credhub-proxy
+  version: 939cada458f0e39b031cc09a7f6db7528b2afd43262e32107955d99945aca199
+  fingerprint: 939cada458f0e39b031cc09a7f6db7528b2afd43262e32107955d99945aca199
+  sha1: sha256:b39a0b19ff7e30c8f8276a2b0e7701cc904cfafc148fbf46d934883dcf28801d
+  packages:
+  - vault-credhub-proxy
+packages:
+- name: golang-1.13-linux
+  version: 1dc53bfedfac5545e4139496bd4f0fef1f6410c09e936411c50911ac7afbcb2d
+  fingerprint: 1dc53bfedfac5545e4139496bd4f0fef1f6410c09e936411c50911ac7afbcb2d
+  sha1: sha256:a2d5cda1dd8d54b60d6cddfeb25364652b559c538ab1c162e5c112d0a14fe367
+  dependencies: []
+- name: vault-credhub-proxy
+  version: 3c04cf9f5751120b1fb54c5626d5f1279b976fd2f88c0aa2638b305212896107
+  fingerprint: 3c04cf9f5751120b1fb54c5626d5f1279b976fd2f88c0aa2638b305212896107
+  sha1: sha256:9d64dc6235f1cb01343237faf82aee716398694c8ceba57fad7c3234f6ef32f3
+  dependencies:
+  - golang-1.13-linux
