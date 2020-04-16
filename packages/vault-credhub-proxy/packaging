@@ -1,9 +1,8 @@
 set -eux
 
-source /var/vcap/packages/golang-1.13-linux/bosh/compile.env
-
 mkdir ${BOSH_INSTALL_TARGET}/bin
+VERSION=0.0.5
 
 pushd vault-credhub-proxy
-go build -mod=vendor -o ${BOSH_INSTALL_TARGET}/bin/vault-credhub-proxy main.go
-
+chmod +x vault-credhub-proxy-${VERSION}
+cp vault-credhub-proxy-${VERSION} ${BOSH_INSTALL_TARGET}/bin/vault-credhub-proxy
