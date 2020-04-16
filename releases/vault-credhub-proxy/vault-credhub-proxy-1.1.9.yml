@@ -1,0 +1,17 @@
+name: vault-credhub-proxy
+version: 1.1.9
+commit_hash: 904807a
+uncommitted_changes: false
+jobs:
+- name: vault-credhub-proxy
+  version: 939cada458f0e39b031cc09a7f6db7528b2afd43262e32107955d99945aca199
+  fingerprint: 939cada458f0e39b031cc09a7f6db7528b2afd43262e32107955d99945aca199
+  sha1: sha256:7001e6ec98f7cf41011394a6de08ef685f360579bef2dbfc51738c481899c52e
+  packages:
+  - vault-credhub-proxy
+packages:
+- name: vault-credhub-proxy
+  version: df370a76ff9c2d82a1d645e3789be817c2124e9022a813b2f1f42caae13af7b9
+  fingerprint: df370a76ff9c2d82a1d645e3789be817c2124e9022a813b2f1f42caae13af7b9
+  sha1: sha256:e2ba314134f2aaede3a897b8310a6861fae7d07be958584d171fe3568a152b97
+  dependencies: []
