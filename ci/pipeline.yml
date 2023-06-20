@@ -168,7 +168,7 @@ jobs:
       rebase: true
       repository: pushme
   - put: github-release
-    resource: vault-credhub-proxy-bosh-release
+    resource: vault-credhub-proxy-boshrelease
     params:
       name:   gh/name
       tag:    gh/tag
@@ -272,7 +272,7 @@ resources:
     secret_access_key: (( grab meta.aws.secret ))
     initial_version:   "0.9.5"
 
-- name: vault-credhub-proxy-bosh-release
+- name: vault-credhub-proxy-boshrelease
   type: github-release
   source:
     user:         (( grab meta.github.owner ))

@@ -23,7 +23,7 @@ meta:
   github:
     owner:        cloudfoundry-community
     source-repo:  vault-credhub-proxy
-    repo:         vault-credhub-proxy-bosh-release
+    repo:         vault-credhub-proxy-boshrelease
     username:     ((github.username))
     branch:       main
     access_token: ((github.access_token_rw))
