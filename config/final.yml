@@ -1,4 +1,4 @@
-name: vault-credhub-proxy
+final_name: vault-credhub-proxy
 blobstore:
   provider: s3
   options:
