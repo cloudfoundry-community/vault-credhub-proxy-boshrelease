@@ -267,10 +267,10 @@ resources:
     driver:            s3
     bucket:            (( grab meta.aws.bucket ))
     region_name:       (( grab meta.aws.region_name ))
-    key:               (( concat meta.github.repo "/version" ))
+    key:               (( concat meta.github.source-repo "/boshrelease-version" ))
     access_key_id:     (( grab meta.aws.access ))
     secret_access_key: (( grab meta.aws.secret ))
-    initial_version:   "0.9.5"
+    initial_version:   "1.2.0"
 
 - name: vault-credhub-proxy-boshrelease
   type: github-release
