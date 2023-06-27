@@ -144,7 +144,7 @@ done
 
 set -x
 
-bosh int ${MANIFEST_PATH} \
+bosh int <( spruce merge "${MANIFEST_PATH}" ) \
   -o tmp/deployment.yml    \
   ${op_patch_files_flags}            \
   --vars-store tmp/creds.yml \
