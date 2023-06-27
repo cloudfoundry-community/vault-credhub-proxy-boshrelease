@@ -11,6 +11,12 @@ meta:
     password: ((thunder-dome.password))
     ca:       ((thunder-dome.ca-certificate))
 
+  credhub:
+    url:      ((thunder-dome-credhub.url))
+    username: ((thunder-dome-credhub.username))
+    password: ((thunder-dome-credhub.password))
+    ca:       ((thunder-dome-credhub.ca-certificate))
+
   aws:
     bucket:   vault-credhub-proxy-pipeline
     access:   ((aws.access_key_id))

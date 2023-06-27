@@ -31,8 +31,8 @@ instance_groups:
         certificate: ((vault_credhub_proxy_ssl.certificate))((vault_credhub_proxy_ssl.ca))
         private_key: ((vault_credhub_proxy_ssl.private_key))
       credhub:
-        server: ((/concourse/main/credhub_url))
-        ca: ((/concourse/main/credhub_ca_cert))
+        server: (( grab $CREDHUB_URL ))
+        ca: (( grab $CREDHUB_CA_CERT ))
 
 variables:
 - name: default_ca
