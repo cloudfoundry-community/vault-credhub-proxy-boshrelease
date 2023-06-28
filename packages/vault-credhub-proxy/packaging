@@ -1,8 +1,7 @@
 set -eux
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
-VERSION=0.0.5
 
 pushd vault-credhub-proxy
-chmod +x vault-credhub-proxy-${VERSION}
-cp vault-credhub-proxy-${VERSION} ${BOSH_INSTALL_TARGET}/bin/vault-credhub-proxy
+chmod +x vault-credhub-proxy
+cp vault-credhub-proxy ${BOSH_INSTALL_TARGET}/bin/vault-credhub-proxy
