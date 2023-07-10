@@ -1,14 +1,14 @@
 groups:
 - name: (( concat "build-" meta.pipeline "-releases" ))
   jobs:
-    - testflight
-    - rc
-    - shipit
+  - testflight
+  - rc
+  - shipit
 - name: versioning
   jobs:
-    - major
-    - minor
-    - patch
+  - major
+  - minor
+  - patch
 - name: upstream-blobs
   jobs:
   - vault-credhub-proxy
@@ -132,7 +132,7 @@ jobs:
   - in_parallel:
     - get: version
       passed: [rc]
-      params: 
+      params:
         bump: final
     - get: git
       passed: [rc]
@@ -187,7 +187,7 @@ jobs:
   public: true
   plan:
   - get: version
-    params: 
+    params:
       bump: patch
   - put: version
     params:
@@ -223,7 +223,7 @@ jobs:
     - get: vault-credhub-proxy
       trigger: true
       params:
-        globs: [vault-credhub-proxy-linux-amd64]
+        globs: [vault-credhub-proxy-*-linux-amd64]
   - task: update-vault-credhub-proxy
     config:
       platform: linux
@@ -243,7 +243,7 @@ jobs:
         REPO_OUT:         pushme
         BLOB_DIR:         vault-credhub-proxy
         BLOB_NAME:        vault-credhub-proxy
-        BLOB_BINARY:      vault-credhub-proxy-linux-amd64
+        BLOB_BINARY:      vault-credhub-proxy-*-linux-amd64
         BLOB_DESTINATION: vault-credhub-proxy/vault-credhub-proxy
         BLOB_CLEANUP:     vault-credhub-proxy/vault-credhub-proxy
         GIT_NAME:         (( grab meta.git.name ))
@@ -267,7 +267,7 @@ resources:
 
 - name: version
   type: semver
-  source :
+  source:
     driver:            s3
     bucket:            (( grab meta.aws.bucket ))
     region_name:       (( grab meta.aws.region_name ))
