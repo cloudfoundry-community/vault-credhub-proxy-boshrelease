@@ -9,6 +9,10 @@ update:
 releases:
 - name: vault-credhub-proxy
   version: latest
+- name: "bpm"
+  version: "1.2.3"
+  url: "https://bosh.io/d/github.com/cloudfoundry/bpm-release?v=1.2.3"
+  sha1: "ad12bb4e1d2c0b94ef679670a99adaff920850d0"
 
 stemcells:
 - alias: default
@@ -24,9 +28,12 @@ instance_groups:
   networks:
   - name: default
   jobs:
+  - name: bpm
+    release: bpm
   - name: vault-credhub-proxy
     release: vault-credhub-proxy
     properties:
+      address: 0.0.0.0:8200
       tls:
         certificate: ((vault_credhub_proxy_ssl.certificate))((vault_credhub_proxy_ssl.ca))
         private_key: ((vault_credhub_proxy_ssl.private_key))
